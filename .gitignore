@@ -1,3 +1,6 @@
 .idea/
 */__pycache__/
-*.html
+**/*.html
+node_modules/
+package-lock.json
+dist/

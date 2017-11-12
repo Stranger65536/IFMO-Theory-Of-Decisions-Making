@@ -1,0 +1,39 @@
+{
+  "name": "lab3",
+  "version": "1.0.0",
+  "description": "lab3",
+  "repository": "https://github.com/Stranger65536/IFMO-Theory-Of-Decisions-Making",
+  "license": "MIT",
+  "author": "Vladislav Trofimov",
+  "dependencies": {
+    "babel-core": "6.23.1",
+    "babel-loader": "6.4.1",
+    "underscore": "1.8.3"
+  },
+  "devDependencies": {
+    "babel-preset-env": "1.6.1",
+    "babel-preset-react": "6.23.0",
+    "babel-preset-stage-0": "6.22.0",
+    "babelify": "8.0.0",
+    "babylon": "6.16.1",
+    "browserify": "14.5.0",
+    "envify": "4.0.0",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "0.5.1",
+    "gulp-clean-css": "3.9.0",
+    "gulp-concat": "2.6.1",
+    "gulp-css-purge": "1.0.27",
+    "gulp-jade": "1.1.0",
+    "gulp-sass": "3.1.0",
+    "jsx-loader": "0.13.2",
+    "material-ui": "0.19.4",
+    "node-notifier": "5.1.2",
+    "react": "16.1.0",
+    "react-dom": "16.1.0",
+    "react-tap-event-plugin": "^3.0.2",
+    "reactify": "1.1.1",
+    "vinyl-source-stream": "1.1.0",
+    "webpack": "3.8.1",
+    "webpack-stream": "4.0.0"
+  }
+}

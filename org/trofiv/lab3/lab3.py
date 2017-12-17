@@ -34,13 +34,18 @@ class Board:
         (board.player, board.opponent) = (board.opponent, board.player)
         return board
 
-    """
-    Calculates the best movement of returns that game is 
-    already won or tied
-    :param player: True if calculate movement for PC, False for human
-    """
-
-    def _minimax(self, player):
+    def minimax(self, player):
+        """
+        Calculates the best movement of returns that game is
+        already won or tied
+        :param player: True if calculate movement for PC,
+        False for human
+        :return
+        (-1, None) if board in the winning position
+        (+1, None if in tied position)
+        (-2, (row, column)) with the best position for human
+        (+2, (row, column)) with the best position for PC
+        """
         if self.won():
             if player:
                 return -1, None
@@ -52,7 +57,7 @@ class Board:
             best = (-2, None)
             for x, y in self.fields:
                 if self.fields[x, y] == self.empty:
-                    value = self.move(x, y)._minimax(not player)[0]
+                    value = self.move(x, y).minimax(not player)[0]
                     if value > best[0]:
                         best = (value, (x, y))
             return best
@@ -60,7 +65,7 @@ class Board:
             best = (+2, None)
             for x, y in self.fields:
                 if self.fields[x, y] == self.empty:
-                    value = self.move(x, y)._minimax(not player)[0]
+                    value = self.move(x, y).minimax(not player)[0]
                     if value < best[0]:
                         best = (value, (x, y))
             return best
@@ -70,7 +75,7 @@ class Board:
         Returns the best movement by the minimax algo
         :return: tuple of the best movement
         """
-        return self._minimax(True)[1]
+        return self.minimax(True)[1]
 
     def tied(self):
         """
